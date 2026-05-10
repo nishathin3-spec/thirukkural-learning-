@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ta">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thirukkural Explorer - திருக்குறள்</title>
+  <meta name="description" content="Explore the wisdom of Thirukkural with meanings in Tamil and English.">
+  <link rel="stylesheet" href="style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@400;600;800&family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet">
+  <!-- Phosphor Icons for modern UI icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+
+  <!-- Sidebar / Navigation -->
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <h1>திருக்குறள்</h1>
+      <button class="close-sidebar" id="closeSidebar" aria-label="Close Sidebar"><i class="ph ph-x"></i></button>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li class="active" data-view="home"><i class="ph ph-house"></i> முகப்பு (Home)</li>
+      <li data-view="favorites"><i class="ph ph-heart"></i> பிடித்தவை (Favorites)</li>
+      <li data-view="quiz"><i class="ph ph-brain"></i> வினாடி வினா (Quiz)</li>
+    </ul>
+    <div class="sidebar-footer">
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+        <i class="ph ph-moon"></i> <span>Dark Mode</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <header class="topbar">
+      <div class="topbar-left">
+        <button class="menu-toggle" id="menuToggle" aria-label="Open Menu"><i class="ph ph-list"></i></button>
+        <div class="breadcrumbs" id="breadcrumbs">
+          <span class="crumb" data-target="home">Home</span>
+        </div>
+      </div>
+      <div class="topbar-right">
+        <div class="search-container">
+          <i class="ph ph-magnifying-glass"></i>
+          <input type="text" id="searchInput" placeholder="Search Kurals or Chapters...">
+        </div>
+      </div>
+    </header>
+
+    <div class="content-area" id="contentArea">
+      <!-- Loading State -->
+      <div id="loader" class="loader-container">
+        <div class="spinner"></div>
+        <p>Loading Thirukkural Data...</p>
+      </div>
+
+      <!-- Dynamic Content Wrapper -->
+      <div id="appView" class="hidden">
+        <!-- Sections / Chapters / Kurals will be injected here -->
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
